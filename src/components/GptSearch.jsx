@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import client from "../utils/openAi";
 import { API_OPTIONS } from "../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
 import { addSearchedMovies } from "../utils/gptMoviesSlice";

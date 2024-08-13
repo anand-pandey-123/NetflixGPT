@@ -10,23 +10,7 @@ function Header() {
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
-  useEffect(()=>{
-    const unscubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
-        const {uid, email, displayName} = user;
-        dispatch(addUser(uid, email, displayName));
-        navigate("/browse")
-      } else {
-        // User is signed out
-        dispatch(removeUSer());
-        navigate("/")
-      }
-    });
-
-    return () => unscubscribe(); // Clean up function when component unmounts
-  }, [])
+  
 
   return (
     <div className=" w-full  ">

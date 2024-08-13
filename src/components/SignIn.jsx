@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { CheckValidData } from "../utils/CheckValidation";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../utils/firebase";
 
 function SignIn() {
   const [errorMessage, setErrorMessage] = useState(null);
-  
+  const navigate = useNavigate()
   const email = useRef(null);
   const password = useRef(null);
 
@@ -20,6 +20,7 @@ function SignIn() {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
+          navigate("/browse")
           
         })
         .catch((error) => {

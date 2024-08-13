@@ -1,16 +1,33 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useNavigate } from "react-router-dom"
 import Browse from "./pages/Browse"
 import SignInPage from "./pages/SignInPage"
 import SignUpPage from "./pages/SignUpPage"
-import { useEffect } from "react"
 import { onAuthStateChanged } from "firebase/auth"
-import { auth } from "./utils/firebase"
 import { useDispatch } from "react-redux"
-import { addUser, removeUSer } from "./utils/userSlice"
+import { useEffect } from "react"
+import { auth } from "./utils/firebase"
 
 
 function App() {
-  
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  useEffect(()=>{
+    const unscubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        // User is signed in, see docs for a list of available properties
+        // https://firebase.google.com/docs/reference/js/auth.user
+        const {uid, email, displayName} = user;
+        dispatch(addUser(uid, email, displayName));
+        navigate("/browse")
+      } else {
+        // User is signed out
+        dispatch(removeUSer());
+        navigate("/")
+      }
+    });
+
+    return () => unscubscribe(); // Clean up function when component unmounts
+  }, [])
 
   return (
       <div className="w-full h-screen">

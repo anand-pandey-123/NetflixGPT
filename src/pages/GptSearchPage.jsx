@@ -1,8 +1,7 @@
 import React from 'react'
 import GptSearch from '../components/GptSearch'
-import { useSelector } from 'react-redux'
-import MovieCard from '../components/MovieCard';
-import GptShow from '../components/gptShow';
+
+import GptShow from '../components/GptShow';
 
 function GptSearchPage() {
   return (

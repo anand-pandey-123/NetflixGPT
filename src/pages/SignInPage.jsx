@@ -12,7 +12,7 @@ function SignInPage() {
         height: '100%',
     }} className=" w-full h-full">
       <div className=" h-full w-full  ">
-        <div className=" px-52">
+        <div className=" md:px-52 mb-14 md:mb-0">
         <Header></Header>
         </div>
         <div className=" flex justify-center  w-full h-full ">

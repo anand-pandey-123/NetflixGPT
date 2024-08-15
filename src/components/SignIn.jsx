@@ -32,7 +32,7 @@ function SignIn() {
   };
 
   return (
-    <div className=" bg-zinc-900 bg-opacity-85 w-[32%] h-[82%] px-16 py-8 rounded-lg  flex flex-col text-white shadow-2xl">
+    <div className=" bg-zinc-900 bg-opacity-85 md:w-[32%] w-[90%] md:h-[82%] h-[70%] px-16 py-8 rounded-lg  flex flex-col text-white shadow-2xl">
       <div className=" font-bold text-4xl text-white">Sign In</div>
       <form className="w-full text-center" onSubmit={(e) => preventDefault()}>
         <input

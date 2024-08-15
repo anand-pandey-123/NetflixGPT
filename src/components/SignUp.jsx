@@ -31,7 +31,7 @@ function SignUp() {
     }
   };
   return (
-    <div className=" bg-zinc-900 bg-opacity-85 w-[32%] h-[90%] px-16 py-8 rounded-lg  flex flex-col text-white shadow-2xl">
+    <div className=" bg-zinc-900 bg-opacity-85 md:w-[32%] w-[90%] md:h-[90%] h-[70%] px-16 py-8 rounded-lg  flex flex-col text-white shadow-2xl">
       <div className=" font-bold text-4xl text-white">Sign Up</div>
       <form className="w-full text-center" onSubmit={(e) => preventDefault()}>
         <input

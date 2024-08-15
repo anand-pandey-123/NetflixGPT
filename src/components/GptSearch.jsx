@@ -31,10 +31,10 @@ function GptSearch() {
 
   return (
     <div className="relative flex justify-center">
-      <div className="absolute  my-52     w-1/2 mx-auto  h-14 p-2">
+      <div className="absolute  my-52  w-full   md:w-1/2 mx-auto  h-20 md:h-14 p-2">
         <form
           action=""
-          className="w-full h-full"
+          className=" flex md:w-full h-full"
           onSubmit={(e) => e.preventDefault()}
         >
           <input
@@ -45,7 +45,7 @@ function GptSearch() {
           />
           <button
             onClick={handleSearch}
-            className="px-4 py-2 ml-2 bg-red-600 w-[16%] rounded-md"
+            className="px-4 py-2 ml-2 bg-red-600  md:w-[16%] rounded-md"
           >
             search
           </button>

@@ -42,12 +42,14 @@ function Browse() {
 
   return (
     <div className="body bg-zinc-950 w-full h-full text-white relative overflow-y-scroll scrollbar-hide">
-      <div className=" w-full flex justify-between fixed z-10 bg-zinc-950 opacity-90 ">
+      <div className=" w-full flex justify-around md:justify-between fixed z-10  bg-zinc-950 opacity-90 ">
+        <div>
         <Header></Header>
-        <button onClick={onClickHandler} className="px-4 py-2  mt-2 text-lg  w-44 h-12 font-semibold rounded-lg border-red-500 border-x-2 border-y-2 hover:bg-red-600">{gptSearchToggle ? "Home" : "GPT Search"}</button>
+        </div>
+        <button onClick={onClickHandler} className="md:ml-[52%] px-4 md:py-2  mt-2 text-sm md:text-lg  md:w-44 w-20 h-12  md:h-12 font-semibold rounded-lg border-red-500 border-x-2 border-y-2 hover:bg-red-600">{gptSearchToggle ? "Home" : "GPT Search"}</button>
         <button
           onClick={handleSignOut}
-          className="px-4 py-2  mt-2 text-lg  w-40 h-12 font-semibold rounded-lg border-red-500 border-x-2 border-y-2 hover:bg-red-600 mr-32 ml-14 "
+          className="md:px-4 px-2 md:py-2 py-2 mt-2 md:text-lg text-sm  md:w-40 w-20 h-12 font-semibold rounded-lg border-red-500 border-x-2 border-y-2 hover:bg-red-600  md:mr-32 md:ml-14 "
         >
           Sign Out
         </button>

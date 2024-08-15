@@ -7,10 +7,10 @@ function VideoBackground({ movieId }) {
   useMoiveTrailer(movieId);
   return (
     <div>
-      <div className="w-screen h-full overflow-hidden ">
+      <div className="w-screen  md:h-full overflow-hidden ">
       <iframe
         
-        className="w-screen aspect-video h-full overflow-x-hidden "
+        className="w-screen aspect-square md:aspect-video h-full overflow-x-hidden "
         src={"https://www.youtube.com/embed/" + trailer?.key + "?&autoplay=1&mute=1"}
         title="YouTube video player"
         // allowfullScreen

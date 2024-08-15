@@ -7,8 +7,8 @@ function SecondaryComponent() {
   const popularMovies = useSelector((store)=> store.movies ?. popularMovies)
   const TopRatedMovies = useSelector((store)=> store.movies ?. TopRatedMovies)
   return (
-    <div className='w-full h-full bg-zinc-950 absolute'>
-      <div className='-mt-80 '>
+    <div className='md:w-full h-full bg-zinc-950 absolute md:absolute'>
+      <div className='md:-mt-80 -mt-20 '>
         <MovieList title={"Now Playing"} movies={movies}></MovieList>
         <MovieList title={"Popular"} movies={popularMovies}></MovieList>
         <MovieList title={"Top Rated Movies"} movies={TopRatedMovies}></MovieList>

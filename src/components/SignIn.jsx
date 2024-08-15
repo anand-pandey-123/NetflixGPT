@@ -32,18 +32,18 @@ function SignIn() {
   };
 
   return (
-    <div className=" bg-zinc-900 bg-opacity-85 md:w-[32%] w-[90%] md:h-[82%] h-[70%] px-16 py-8 rounded-lg  flex flex-col text-white shadow-2xl">
-      <div className=" font-bold text-4xl text-white">Sign In</div>
+    <div className=" bg-zinc-900 bg-opacity-85 md:w-[32%] w-[90%] md:h-[82%] h-[70%] md:px-16 px-10 md:py-8 py-2 rounded-lg  flex flex-col text-white shadow-2xl">
+      <div className=" font-bold text-2xl  md:text-4xl text-white">Sign In</div>
       <form className="w-full text-center" onSubmit={(e) => preventDefault()}>
         <input
           ref={email}
-          className="bg-zinc-900 mt-8 rounded-md px-4 py-4 w-full font-semibold border-zinc-500  border-[1px]"
+          className="bg-zinc-900 md:mt-8 mt-4 rounded-md px-4 py-4 w-full font-semibold border-zinc-500  border-[1px]"
           placeholder="Email or phone number"
           type="text"
         />
         <input
           ref={password}
-          className="bg-zinc-900 mt-4 rounded-md px-4 py-4 w-full font-semibold border-zinc-500  border-[1px]"
+          className="bg-zinc-900 md:mt-4 mt-2 rounded-md px-4 py-4 w-full font-semibold border-zinc-500  border-[1px]"
           placeholder="password"
           type="password"
         />
@@ -59,7 +59,7 @@ function SignIn() {
           </p>
         ) : null}
       </form>
-      <div className="text-center mt-4 mb-4 font-regular text-lg text-zinc-300">
+      <div className="text-center md:mt-4 md:mb-4 font-regular text-lg text-zinc-300">
         OR
       </div>
       <div className="bg-red-600 rounded-md px-4 py-2 text-center text-white font-semibold cursor-pointer hover:bg-red-700 hover:duration-100">
@@ -77,7 +77,7 @@ function SignIn() {
           </span>
         </Link>
       </div>
-      <div className="text-sm mt-4 text-zinc-500">
+      <div className="text-sm md:mt-4 text-zinc-500">
         This page is protected by Google reCAPTCHA to ensure you're not a bot.
         <span className="text-blue-800 font-semibold hover:underline cursor-pointer">
           {" "}

@@ -6,6 +6,7 @@ import { onAuthStateChanged } from "firebase/auth"
 import { useDispatch } from "react-redux"
 import { useEffect } from "react"
 import { auth } from "./utils/firebase"
+import { addUser, removeUser } from "./utils/userSlice"
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         navigate("/browse")
       } else {
         // User is signed out
-        dispatch(removeUSer());
+        dispatch(removeUser());
         navigate("/")
       }
     });

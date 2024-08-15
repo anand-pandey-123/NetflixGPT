@@ -6,7 +6,6 @@ import { removeSearchedMovies } from '../utils/gptMoviesSlice';
 function GptShow() {
     const searchedMovie = useSelector((store) => store.gptMovies?.searchedMovies);
     const dispatch = useDispatch();
-    console.log(searchedMovie)
 
     const handleClick = () => {
         dispatch(removeSearchedMovies());

@@ -1,14 +1,9 @@
-import { onAuthStateChanged } from 'firebase/auth';
-import React, { useEffect } from 'react'
-import { useDispatch } from 'react-redux';
-import { auth } from '../utils/firebase';
-import { addUser, removeUSer } from '../utils/userSlice';
-import { useNavigate } from 'react-router-dom';
+import React from 'react'
+
 
 function Header() {
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate()
+ 
 
   
 

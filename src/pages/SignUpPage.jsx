@@ -15,7 +15,7 @@ function SignUpPage() {
         <div className="md:px-52 mb-14 md:mb-0">
         <Header></Header>
         </div>
-        <div className=" flex justify-center  w-full h-full ">
+        <div className=" flex justify-center  w-full md:h-full ">
           <SignUp></SignUp>
         </div>
       </div>

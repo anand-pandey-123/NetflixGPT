@@ -13,9 +13,9 @@ function GptShow() {
   return (
     <div className=''>
         
-        {searchedMovie ? <div className={`  md:h-full mt-[95%] md:mt-72 w-[80%] mx-auto rounded-md p-2 bg-zinc-950`}>
+        {searchedMovie ? <div className={`  md:h-full  mt-[95%] md:mt-72 md:w-[80%] mx-auto rounded-md p-2 bg-zinc-950`}>
             <div className='flex justify-between mb-4'>
-            <h1 className='text-2xl px-5 font-semibold mb-2 text-red-600 '>Here are the Results : </h1>
+            <h1 className='md:text-2xl px-5 font-semibold mb-2 text-red-600 '>Here are the Results : </h1>
             <button onClick={handleClick} className='rounded-md h-8 w-8 bg-red-600'>X</button>
             </div>
             <div className='flex overflow-x-scroll scrollbar-hide'>
